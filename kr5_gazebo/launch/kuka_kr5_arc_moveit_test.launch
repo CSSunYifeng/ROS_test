@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <!-- Launch Gazebo    -->
+  <include file="$(find kr5_gazebo)/launch/kuka_kr5_arc_world.launch" />
+
+ 
+  <include file="$(find kr5_gazebo)/launch/ros_controllers.launch" />   
+
+
+  <include file="$(find kr5_moveit_config)/launch/ros_controllers.launch" />    
+ 
+
+  <include file="$(find kr5_gazebo)/launch/moveit_planning_execution.launch" />    
+	
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+		<param name="/use_gui" value="false"/>
+		<rosparam param="/source_list">[/move_group/fake_controller_joint_states]</rosparam>
+	</node>
+
+</launch>
+
