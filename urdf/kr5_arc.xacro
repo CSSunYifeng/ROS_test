@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot name="kuka_kr5_arc" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find kuka_kr5_support)/urdf/kr5_arc_macro.xacro" />
+  <xacro:kuka_kr5_arc prefix=""/>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <legacyModeNS>true</legacyModeNS>
+      <robotNamespace>/kuka_kr5_arc</robotNamespace>
+    </plugin>
+  </gazebo>
+</robot>
