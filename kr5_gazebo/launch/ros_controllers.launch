@@ -6,7 +6,7 @@
 
   <!-- Load the controllers -->
   <node name="kr5_gazebo_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="kuka_kr5_arc" args="joint_state_controller "/>
+    output="screen" ns="/kuka_kr5_arc" args="joint_state_controller "/>
 
   <!-- Convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"

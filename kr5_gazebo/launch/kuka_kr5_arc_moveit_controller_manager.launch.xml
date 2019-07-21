@@ -2,5 +2,8 @@
   <!-- Set the param that trajectory_execution_manager needs to find the controller plugin -->
   <arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveItSimpleControllerManager" />
   <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
+  <!--(through FollerController connecting Moveit)-->
   <rosparam file="$(find kr5_gazebo)/config/kr5_manager_controllers.yaml"/> 
+  <!--gazebo-->
+  <!--rosparam file="$(find kr5_gazebo)/config/ros_controllers.yaml"/--> 
 </launch>
